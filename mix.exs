@@ -34,7 +34,6 @@ defmodule JitterEntropyPort.MixProject do
         "mix.exs",
         "README.md",
         "update.sh",
-        "priv/.gitkeep",
         "Makefile",
 	"src/README.md",
 	"src/jitterentropy-base-user.h",
