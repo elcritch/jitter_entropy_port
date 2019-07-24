@@ -16,7 +16,7 @@ defmodule JitterEntropyPort.MixProject do
   def application do
     [
       mod: {JitterEntropyPort, []},
-      extra_applications: [:logger]
+      applications: [:logger]
     ]
   end
 
