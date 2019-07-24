@@ -1,4 +1,4 @@
 
 all:
 	$(MAKE) -C src all
-	$(MAKE) -C src install
+	cp src/jitterentropy-rngd priv/jitterentropy-rngd

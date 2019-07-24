@@ -1,18 +1,15 @@
 defmodule JitterEntropyPort do
-  @moduledoc """
-  Documentation for JitterEntropyPort.
-  """
+  use Application
 
-  @doc """
-  Hello world.
+  def start(_type, _args) do
+    priv_dir = :code.priv_dir(:jitter_entropy_port) |> to_string()
+    jitter_bin = Path.join(priv_dir, "priv/jitterentropy-rngd")
+    jitter_options = []
 
-  ## Examples
+    children = [
+      {MuonTrap.Daemon, [jitter_bin, [], jitter_options]}
+    ]
 
-      iex> JitterEntropyPort.hello()
-      :world
-
-  """
-  def hello do
-    :world
+    Supervisor.start_link(children, strategy: :one_for_one)
   end
 end
