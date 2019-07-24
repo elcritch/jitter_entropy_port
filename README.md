@@ -8,6 +8,9 @@ Elixir wrapper for `jiterentropy-rngd` by @smuellerDD:
 
 Useful on embedded devices without a TRNG/PRNG support.
 
+Requires the `jitter` module in the Linux kernel is loaded or compiled in. 
+
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
