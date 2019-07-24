@@ -6,7 +6,7 @@ CFLAGS ?=-Wextra -Wall -pedantic -fPIE -pie -fstack-protector-strong -fwrapv --p
 LDFLAGS ?=-Wl,-z,relro,-z,now
 
 # Change as necessary
-DESTDIR := priv/
+DESTDIR := ../priv/
 INSTALL ?= install
 PREFIX := /usr/local
 UNITDIR ?= $(shell pkg-config --variable=systemdsystemunitdir systemd 2>/dev/null || echo /usr/lib/systemd/system)

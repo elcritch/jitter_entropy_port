@@ -27,3 +27,6 @@ jitter_entropy_port-*.tar
 *.o
 priv/
 
+src/jitterentropy-rngd
+src/jitterentropy.service
+
