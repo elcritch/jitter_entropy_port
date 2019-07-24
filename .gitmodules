@@ -1,0 +1,3 @@
+[submodule "jitterentropy-rngd"]
+	path = jitterentropy-rngd
+	url = https://github.com/smuellerDD/jitterentropy-rngd.git
