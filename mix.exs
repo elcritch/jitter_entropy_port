@@ -35,6 +35,7 @@ defmodule JitterEntropyPort.MixProject do
         "README.md",
         "update.sh",
         "src/*",
+        "priv/.gitkeep",
         "Makefile"
       ],
       licenses: ["Apache-2.0"],
