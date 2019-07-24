@@ -8,9 +8,22 @@ Elixir wrapper for `jiterentropy-rngd` by @smuellerDD:
 
 Useful on embedded devices without a TRNG/PRNG support.
 
-Requires the `jitter` module in the Linux kernel is loaded or compiled in. 
+Requires the `jitter` module in the Linux kernel is loaded or compiled in.
 
 More info here: https://www.chronox.de/jent/doc/CPU-Jitter-NPTRNG.html
+
+## Kernel Config
+
+Enable the jitter entropy module using menuconfig, or modify the Linux kernel config by setting:
+
+```
+CONFIG_CRYPTO_RNG=y
+CONFIG_CRYPTO_JITTERENTROPY=y
+```
+
+If the `jitterentropy` needs loaded as a kernel module set in your config.exs:
+
+    config :jitter_entropy_port, :load_module, true
 
 ## Installation
 
