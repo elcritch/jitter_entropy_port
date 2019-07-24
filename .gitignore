@@ -23,3 +23,7 @@ erl_crash.dump
 jitter_entropy_port-*.tar
 
 .elixir_ls
+
+*.o
+priv/
+
