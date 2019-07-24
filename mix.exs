@@ -27,7 +27,7 @@ defmodule JitterEntropyPort.MixProject do
 
   defp package do
     [
-      name: "JitterEntropyPort",
+      name: "jitter_entropy_port",
       files: [
         "lib",
         "LICENSE",
