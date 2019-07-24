@@ -44,6 +44,7 @@ defmodule JitterEntropyPort.MixProject do
 
   defp deps do
     [
+      {:ex_doc, "~> 0.14", only: :dev, runtime: false},
       {:elixir_make, "~> 0.4", runtime: false},
       {:muontrap, "~> 0.4"}
     ]
