@@ -37,6 +37,7 @@ defmodule JitterEntropyPort.MixProject do
         "LICENSE",
         "mix.exs",
         "README.md",
+        "update.sh",
         "src/*.[ch]",
         "Makefile"
       ]
