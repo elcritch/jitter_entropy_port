@@ -28,6 +28,7 @@ defmodule JitterEntropyPort do
 
   def load_module() do
     if Application.get_env(:jitter_entropy_port, :load_module, false) == true do
+      Logger.info("Loading Jitter Entropy Module ")
       System.cmd("modprobe", ["jitterentropy_rng"])
     end
   end
