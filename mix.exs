@@ -34,9 +34,17 @@ defmodule JitterEntropyPort.MixProject do
         "mix.exs",
         "README.md",
         "update.sh",
-        "src/*",
         "priv/.gitkeep",
         "Makefile"
+	"src/README.md",
+	"src/jitterentropy-base-user.h",
+	"src/COPYING",
+	"src/jitterentropy-rngd.c",
+	"src/jitterentropy-base.c",
+	"src/jitterentropy-rngd.1",
+	"src/jitterentropy.service.in",
+	"src/jitterentropy.h",
+	"src/Makefile",
       ],
       licenses: ["Apache-2.0"],
       links: %{"GitHub" => "https://github.com/elcritch/jitter_entropy_port"}
