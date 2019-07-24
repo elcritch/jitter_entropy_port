@@ -10,13 +10,10 @@ defmodule JitterEntropyPort.MixProject do
       deps: deps(),
       description: description(),
       package: package(),
-      compilers: [:elixir_make] ++ Mix.compilers(),
-      name: "JitterEntropyPort",
-      source_url: "https://github.com/elcritch/jitter_entropy_port"
+      compilers: [:elixir_make] ++ Mix.compilers()
     ]
   end
 
-  # Run "mix help compile.app" to learn about applications.
   def application do
     [
       mod: {JitterEntropyPort, []},
@@ -30,9 +27,8 @@ defmodule JitterEntropyPort.MixProject do
 
   defp package do
     [
-      # ...
+      name: "JitterEntropyPort",
       files: [
-        # These are the default files
         "lib",
         "LICENSE",
         "mix.exs",
@@ -40,18 +36,16 @@ defmodule JitterEntropyPort.MixProject do
         "update.sh",
         "src/*.[ch]",
         "Makefile"
-      ]
-      # ...
+      ],
+      licenses: ["Apache-2.0"],
+      links: %{"GitHub" => "https://github.com/elcritch/jitter_entropy_port"}
     ]
   end
 
-  # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
       {:elixir_make, "~> 0.4", runtime: false},
       {:muontrap, "~> 0.4"}
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
   end
 end
