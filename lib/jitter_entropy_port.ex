@@ -4,7 +4,7 @@ defmodule JitterEntropyPort do
 
   def start(_type, _args) do
     priv_dir = :code.priv_dir(:jitter_entropy_port) |> to_string()
-    jitter_bin = Path.join(priv_dir, "priv/jitterentropy-rngd")
+    jitter_bin = Path.join(priv_dir, "jitterentropy-rngd")
     jitter_options = []
 
     Logger.info("Starting Jitter Entropy Service ")
