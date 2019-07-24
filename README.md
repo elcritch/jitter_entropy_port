@@ -10,6 +10,7 @@ Useful on embedded devices without a TRNG/PRNG support.
 
 Requires the `jitter` module in the Linux kernel is loaded or compiled in. 
 
+More info here: https://www.chronox.de/jent/doc/CPU-Jitter-NPTRNG.html
 
 ## Installation
 
