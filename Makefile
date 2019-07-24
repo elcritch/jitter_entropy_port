@@ -1,4 +1,10 @@
 
-all:
+PREFIX = $(MIX_COMPILE_PATH)/../priv
+
+$(PREFIX):
+	mkdir -p $@
+
+all: $(PREFIX)
 	$(MAKE) -C src all
-	cp src/jitterentropy-rngd priv/jitterentropy-rngd
+	mkdir priv/
+	cp src/jitterentropy-rngd $(PREFIX)/jitterentropy-rngd
