@@ -8,9 +8,6 @@ LDFLAGS ?=-Wl,-z,relro,-z,now
 # Change as necessary
 PREFIX = $(MIX_APP_PATH)/priv
 BUILD  = $(MIX_APP_PATH)/obj
-DESTDIR := ../priv/
-INSTALL ?= install
-PREFIX := /usr/local
 UNITDIR ?= $(shell pkg-config --variable=systemdsystemunitdir systemd 2>/dev/null || echo /usr/lib/systemd/system)
 
 NAME := jitterentropy-rngd
@@ -33,10 +30,10 @@ all: $(BUILD) $(PREFIX) $(NAME) strip
 
 $(NAME): $(OBJS)
 #	scan-build --use-analyzer=/usr/bin/clang $(CC) $(OBJS) -o $(NAME) $(LDFLAGS)
-	$(CC) $(OBJS) -o $(MIX_APP_PATH)/priv/$(NAME) $(LDFLAGS)
+	$(CC) $(OBJS) -o $(PREFIX)/$(NAME) $(LDFLAGS)
 
 strip: $(NAME)
-	$(STRIP) --strip-unneeded $(NAME)
+	$(STRIP) --strip-unneeded $(PREFIX)/$(NAME)
 
 $(BUILD)/%.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
